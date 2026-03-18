@@ -585,6 +585,26 @@
       .spec-cell:nth-child(even) { border-right: none; }
 
       .banner-box { padding: 48px 32px; }
+
+      /* Lightbox mobile: move arrows to bottom, flanking the counter */
+      .lightbox-img {
+        max-width: 88vw;
+        max-height: 80vh;
+      }
+      .lightbox-arrow {
+        top: auto;
+        bottom: 18px;
+        transform: none;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+      }
+      .lightbox-arrow:hover {
+        transform: scale(1.08);
+      }
+      .lightbox-arrow.prev { left: calc(50% - 80px); }
+      .lightbox-arrow.next { right: calc(50% - 80px); }
+      .lightbox-counter { bottom: 26px; }
     }
 
     @media (max-width: 480px) {
