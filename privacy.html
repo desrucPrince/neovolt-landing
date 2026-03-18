@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — neoVolt</title>
+  <meta name="description" content="Privacy Policy for neoVolt, a BLE battery controller for PeakDo Link-Power." />
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- FOUC prevention -->
+  <script>
+    (function(){var t=localStorage.getItem('theme'),d=document.documentElement,m=document.querySelector('meta[name="theme-color"]');if(t==='dark'){d.classList.add('dark')}else if(t==='light'){d.classList.add('light')}if(m){var isDark=(t==='dark')||(!t&&window.matchMedia('(prefers-color-scheme:dark)').matches);m.content=isDark?'#0d0d0d':'#ffffff'}})();
+  </script>
+
+  <style>
+    :root {
+      --ink: #0d0d0d; --ink-mid: #666; --ink-faint: #999;
+      --paper: #ffffff; --paper-2: #f8f8f6;
+      --border: rgba(0,0,0,0.08); --accent: #66cc44;
+      --pad-x: 10vw; --nav-h: 80px;
+      --nav-bg: rgba(255,255,255,0.9);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not(.light) {
+        --ink: #f5f5f7; --ink-mid: #a1a1a6; --ink-faint: #6e6e73;
+        --paper: #0d0d0d; --paper-2: #1a1a1a;
+        --border: rgba(255,255,255,0.08);
+        --nav-bg: rgba(13,13,13,0.9);
+      }
+    }
+    html.dark {
+      --ink: #f5f5f7; --ink-mid: #a1a1a6; --ink-faint: #6e6e73;
+      --paper: #0d0d0d; --paper-2: #1a1a1a;
+      --border: rgba(255,255,255,0.08);
+      --nav-bg: rgba(13,13,13,0.9);
+    }
+    .theme-transition, .theme-transition *, .theme-transition *::before, .theme-transition *::after {
+      transition: background-color .3s ease, color .3s ease, border-color .3s ease !important;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; background: var(--paper); }
+    body {
+      font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background: var(--paper); color: var(--ink); overflow-x: hidden;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { opacity: .85; }
+
+    nav {
+      position: sticky; top: 0; z-index: 200; height: var(--nav-h);
+      padding: 0 var(--pad-x); display: flex; align-items: center;
+      background: var(--nav-bg); backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--border);
+    }
+    .nav-inner { width: 100%; display: flex; align-items: center; justify-content: space-between; }
+    .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+    .nav-icon { width: 32px; height: 32px; border-radius: 8px; object-fit: cover; border: 1px solid var(--border); }
+    .nav-name { font-size: 17px; font-weight: 800; letter-spacing: -0.03em; }
+    .nav-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--ink); color: #fff; font-size: 14px; font-weight: 700;
+      padding: 10px 20px; border-radius: 12px; text-decoration: none;
+      transition: opacity .15s, transform .15s;
+    }
+    .nav-cta:hover { opacity: .85; transform: translateY(-1px); color: #fff; }
+
+    .content {
+      max-width: 720px; margin: 0 auto;
+      padding: clamp(48px, 8vw, 80px) clamp(20px, 4vw, 24px);
+    }
+    .content h1 {
+      font-size: clamp(28px, 5vw, 44px); font-weight: 800;
+      letter-spacing: -0.035em; color: var(--ink); margin-bottom: 8px;
+    }
+    .page-meta {
+      font-family: "Courier New", monospace; font-size: 12px;
+      font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--ink-faint); margin-bottom: 48px;
+    }
+    .content h2 {
+      font-size: 20px; font-weight: 800; letter-spacing: -0.02em;
+      color: var(--ink); margin-top: 40px; margin-bottom: 12px;
+    }
+    .content p { color: var(--ink-mid); margin-bottom: 16px; line-height: 1.65; }
+    .content ul { color: var(--ink-mid); margin-bottom: 16px; padding-left: 24px; line-height: 1.65; }
+    .content li { margin-bottom: 8px; }
+    .content strong { color: var(--ink); }
+
+    footer {
+      padding: 40px var(--pad-x) 48px; background: var(--paper);
+      border-top: 1px solid var(--border);
+    }
+    .footer-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-brand { display: flex; flex-direction: column; gap: 2px; }
+    .footer-brand-name { font-size: 15px; font-weight: 800; letter-spacing: -0.02em; color: var(--ink); }
+    .footer-brand-sub { font-size: 13px; color: var(--ink-faint); }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 4px; }
+    .footer-link {
+      padding: 8px 14px; font-size: 14px; font-weight: 600; color: var(--ink-mid);
+      border-radius: 10px; text-decoration: none; transition: background .15s, color .15s;
+    }
+    .footer-link:hover { background: var(--paper-2); color: var(--ink); }
+    .footer-copy {
+      margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border);
+      font-size: 13px; color: var(--ink-faint);
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+    }
+    @media (max-width: 820px) { :root { --pad-x: 6vw; --nav-h: 64px; } }
+
+    /* Nav CTA dark override */
+    @media (prefers-color-scheme: dark) { :root:not(.light) .nav-cta { background: #f5f5f7; color: #0d0d0d; } }
+    html.dark .nav-cta { background: #f5f5f7; color: #0d0d0d; }
+
+    .nav-actions { display: flex; align-items: center; gap: 10px; }
+    .theme-toggle {
+      width: 36px; height: 36px; border-radius: 10px;
+      border: 1.5px solid var(--border); background: transparent;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      color: var(--ink-mid); transition: border-color .15s, color .15s; padding: 0;
+    }
+    .theme-toggle:hover { border-color: var(--ink-faint); color: var(--ink); }
+    .theme-toggle svg { width: 18px; height: 18px; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="/">
+      <img class="nav-icon" src="assets/neoVolt-iOS-Dark-1024x1024@1x.png" alt="neoVolt" onerror="this.style.background='var(--accent)'">
+      <span class="nav-name">neoVolt</span>
+    </a>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <svg id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+      <a class="nav-cta" href="#">App Store</a>
+    </div>
+  </div>
+</nav>
+
+<main class="content">
+  <h1>Privacy Policy</h1>
+  <p class="page-meta">Effective date: March 17, 2026</p>
+
+  <h2>Introduction</h2>
+  <p>neoCortez Software (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) operates the neoVolt mobile application (the &ldquo;App&rdquo;). This Privacy Policy describes how we handle information when you use our App. We are committed to protecting your privacy and being transparent about our data practices.</p>
+
+  <h2>Information We Collect</h2>
+  <p><strong>We do not collect any personal data.</strong> The App operates entirely on your device and communicates exclusively with your PeakDo Link-Power battery via Bluetooth Low Energy (BLE). No data is transmitted to our servers or any third-party services.</p>
+  <p>Specifically:</p>
+  <ul>
+    <li>No personal information is collected, stored, or transmitted.</li>
+    <li>No analytics or tracking tools are used.</li>
+    <li>No cookies or identifiers are created.</li>
+    <li>No account creation is required.</li>
+    <li>No usage data is collected.</li>
+  </ul>
+
+  <h2>Bluetooth Data</h2>
+  <p>The App communicates with your PeakDo Link-Power device over Bluetooth Low Energy to read battery status, port information, and device settings. This data is processed locally on your iPhone in real time and is never stored persistently or transmitted anywhere. When you close the App or disconnect from the device, this data is discarded.</p>
+
+  <h2>How We Use Information</h2>
+  <p>Since we do not collect any information, there is no data to use. All device readings (voltage, current, temperature, battery level) are displayed in real time and exist only in your device&rsquo;s memory while the App is active.</p>
+
+  <h2>Third-Party Services</h2>
+  <p>The App does not integrate with any third-party services, SDKs, analytics platforms, advertising networks, or cloud services. There are no external network requests made by the App.</p>
+
+  <h2>Data Retention</h2>
+  <p>No user data is retained because no user data is collected. Battery and device readings are transient, existing only in memory during an active BLE connection.</p>
+
+  <h2>Data Security</h2>
+  <p>While we do not collect or store data, all communication between the App and your PeakDo Link-Power device occurs directly over Bluetooth Low Energy. No data passes through external servers or cloud services.</p>
+
+  <h2>Children&rsquo;s Privacy</h2>
+  <p>The App is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. Since the App collects no personal information from any user, there is no risk of inadvertent collection from minors. If you believe a child has somehow provided us with personal information, please contact us at <a href="mailto:privacy@neocortez.com">privacy@neocortez.com</a> and we will investigate promptly.</p>
+
+  <h2>California Consumer Privacy Act (CCPA)</h2>
+  <p>If you are a California resident, you have the right to know what personal information is collected, disclosed, or sold. Since neoVolt collects no personal information whatsoever, there is no data to disclose, delete, or opt out of. We do not sell personal information. We do not share personal information with third parties for their direct marketing purposes.</p>
+
+  <h2>International Users</h2>
+  <p>The App is available internationally. Since no data is collected or transmitted, there are no cross-border data transfer concerns. The App complies with GDPR, CCPA, and other applicable privacy regulations by virtue of collecting no personal data.</p>
+
+  <h2>Changes to This Privacy Policy</h2>
+  <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated effective date. We encourage you to review this policy periodically. Continued use of the App after any changes constitutes acceptance of the revised policy.</p>
+
+  <h2>Contact Us</h2>
+  <p>If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:</p>
+  <p><a href="mailto:privacy@neocortez.com">privacy@neocortez.com</a></p>
+</main>
+
+<footer>
+  <div class="footer-row">
+    <div class="footer-brand">
+      <span class="footer-brand-name">neoCortez Software</span>
+      <span class="footer-brand-sub">Making tools that get out of your way.</span>
+    </div>
+    <div class="footer-links">
+      <a class="footer-link" href="privacy.html">Privacy Policy</a>
+      <a class="footer-link" href="support.html">Support</a>
+      <a class="footer-link" href="https://neocortez.com">neocortez.com</a>
+    </div>
+  </div>
+  <div class="footer-copy">
+    <span>&copy; 2026 neoCortez Software. All rights reserved.</span>
+    <span>Made with precision.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement,toggle=document.getElementById('theme-toggle'),
+      moon=document.getElementById('icon-moon'),sun=document.getElementById('icon-sun'),
+      meta=document.querySelector('meta[name="theme-color"]');
+  function isDark(){if(root.classList.contains('dark'))return true;if(root.classList.contains('light'))return false;return window.matchMedia('(prefers-color-scheme:dark)').matches}
+  function update(){var d=isDark();moon.style.display=d?'none':'block';sun.style.display=d?'block':'none';if(meta)meta.content=d?'#0d0d0d':'#ffffff'}
+  update();
+  toggle.addEventListener('click',function(){var d=isDark(),m=d?'light':'dark';localStorage.setItem('theme',m);root.classList.add('theme-transition');root.classList.remove('dark','light');root.classList.add(m);update();setTimeout(function(){root.classList.remove('theme-transition')},350)});
+  window.matchMedia('(prefers-color-scheme:dark)').addEventListener('change',function(){if(!localStorage.getItem('theme'))update()});
+})();
+</script>
+</body>
+</html>

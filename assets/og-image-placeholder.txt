@@ -1,0 +1,16 @@
+OG IMAGE - SOCIAL SHARE PREVIEW
+=================================
+
+Create an og-image.png file and save it here.
+
+Specs:
+  - Size: 1200x630px exactly
+  - Background: #111113 (matches landing page)
+  - Content: App icon + "neoVolt" + tagline
+  - Accent color: #00e5ff (cyan)
+  - Font: monospace to match brand
+
+This image appears when the landing page URL is shared on
+Twitter, iMessage, Slack, Discord, LinkedIn, etc.
+
+Generate with Nano Banana Pro, Figma, or any image editor.
